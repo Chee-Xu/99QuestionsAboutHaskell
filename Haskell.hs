@@ -13,3 +13,8 @@ elementAt [] _ = error "out the range"
 elementAt (x:xs) i
     |i == 1 = x
     |otherwise =  elementAt xs (i-1)
+
+--find the length of the list
+Length           :: [a] -> Int
+Length []        =  0
+Length (x:xs)    =  1 + Length xs
